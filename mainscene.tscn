@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cl3svkhel0pof"]
+
+[ext_resource type="PackedScene" uid="uid://dgyn4x05lw0mc" path="res://player.tscn" id="1_wdehe"]
+
+[sub_resource type="Environment" id="Environment_5hoyf"]
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_1p5gm"]
+
+[sub_resource type="Environment" id="Environment_cwoyb"]
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_dgbe8"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.45025, -0.355695, 0.818997, -0.499898, 0.65959, 0.561286, -0.739849, -0.662134, 0.119169, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_wdehe")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.5, -0.259871, 0.826116, 0, 0.953916, 0.300073, -0.866025, 0.150037, -0.476958, 3, 1, -1)
+environment = SubResource("Environment_5hoyf")
+attributes = SubResource("CameraAttributesPhysical_1p5gm")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Camera3D"]
+environment = SubResource("Environment_cwoyb")
+camera_attributes = SubResource("CameraAttributesPhysical_dgbe8")
