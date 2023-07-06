@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://diitc58ex03re"]
+
+[ext_resource type="PackedScene" uid="uid://cvlll411chqft" path="res://Player.glb" id="1_4qlfs"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_5kbri"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jv4ol"]
+size = Vector3(2.15222, 2.07931, 2.13994)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_5kbri")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_jv4ol")
+
+[node name="visuals" type="Node3D" parent="."]
+
+[node name="Player" parent="visuals" instance=ExtResource("1_4qlfs")]
+
+[node name="pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.829176, 0)
+
+[node name="Camera3D" type="Camera3D" parent="pivot"]
+transform = Transform3D(1, 0, 0, 0, 0.979551, 0.201198, 0, -0.201198, 0.979551, -0.10747, 0.923384, 2.79519)
+fov = 88.2276
