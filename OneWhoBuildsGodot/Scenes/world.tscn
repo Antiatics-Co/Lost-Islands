@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmagv6xu8eha5"]
+[gd_scene load_steps=13 format=3 uid="uid://dmagv6xu8eha5"]
 
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_fvj1i"]
 [ext_resource type="Texture2D" uid="uid://qthqx1sfkls7" path="res://Assets/Floorgrid/floor texture1.png" id="1_v3b4g"]
 [ext_resource type="Texture2D" uid="uid://cs0dad6i0mlie" path="res://Assets/Boxes/stone.jpg" id="2_53ca0"]
+[ext_resource type="PackedScene" uid="uid://blfxw3ko8y6qp" path="res://Scenes/PauseMenu.tscn" id="2_pu5l1"]
 [ext_resource type="PackedScene" uid="uid://diitc58ex03re" path="res://Scenes/Player.tscn" id="3_3x2av"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xhtic"]
@@ -39,6 +40,7 @@ albedo_texture = ExtResource("2_53ca0")
 
 [node name="world" type="Node3D"]
 script = ExtResource("1_fvj1i")
+PauseMenu = ExtResource("2_pu5l1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.938911, -0.23653, 0.250001, -0.326081, -0.379037, 0.866027, -0.110082, -0.894642, -0.43301, 600.654, -124.656, -133.11)

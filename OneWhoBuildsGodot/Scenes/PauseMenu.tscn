@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://blfxw3ko8y6qp"]
+
+[ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="1_0ao0f"]
+[ext_resource type="PackedScene" uid="uid://ch0pbhc1ey7nb" path="res://Scenes/MainMenu.tscn" id="2_qiit2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5855"]
+bg_color = Color(0.286275, 0.6, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm3xq"]
+bg_color = Color(0.0352941, 0.6, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6k6j"]
+bg_color = Color(0.6, 0.6, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8fie"]
+bg_color = Color(0.807843, 0.494118, 0.952941, 1)
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 24.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ao0f")
+MainMenu = ExtResource("2_qiit2")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.486
+anchor_bottom = 0.556
+offset_right = 580.464
+offset_bottom = 292.16
+color = Color(0.137255, 0.137255, 0.137255, 0.619608)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "Pause Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_n5855")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jm3xq")
+text = "Resume"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_o6k6j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e8fie")
+text = "Quit"
+
+[connection signal="button_up" from="VBoxContainer/Resume" to="." method="_on_resume_button_up"]
+[connection signal="button_up" from="VBoxContainer/Exit" to="." method="_on_exit_button_up"]
