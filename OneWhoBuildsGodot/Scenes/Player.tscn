@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://diitc58ex03re"]
+[gd_scene load_steps=5 format=3 uid="uid://diitc58ex03re"]
 
 [ext_resource type="PackedScene" uid="uid://cvlll411chqft" path="res://Player.glb" id="1_4qlfs"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_5kbri"]
+[ext_resource type="PackedScene" uid="uid://blfxw3ko8y6qp" path="res://Scenes/PauseMenu.tscn" id="2_glimr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jv4ol"]
 size = Vector3(2.15222, 2.07931, 2.13994)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_5kbri")
+PauseMenu = ExtResource("2_glimr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_jv4ol")

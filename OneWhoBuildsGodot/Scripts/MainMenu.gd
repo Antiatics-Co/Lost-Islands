@@ -10,11 +10,11 @@ func _ready():
 func _process(delta):
 	pass
 
-@export var mainGameScene : PackedScene
+@export var mainGameScene1 : PackedScene
 
 
 func _on_start_button_up():
-	get_tree().change_scene_to_packed(mainGameScene)	
+	get_tree().change_scene_to_packed(mainGameScene1)	
 
 
 func _on_quit_button_down():

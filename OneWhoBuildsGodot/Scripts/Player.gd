@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @onready var pivot = $pivot
 
+@export var PauseMenu : PackedScene
 
 
 const  SPEED = 2.0
@@ -46,4 +47,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-		
+func _unhandled_input(event):
+	if event.is_action_pressed("Pause"):
+		get_tree().change_scene_to_packed(PauseMenu)
+	
