@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmagv6xu8eha5"]
+[gd_scene load_steps=11 format=3 uid="uid://dmagv6xu8eha5"]
 
-[ext_resource type="Script" path="res://Scripts/world.gd" id="1_36kmi"]
 [ext_resource type="Texture2D" uid="uid://qthqx1sfkls7" path="res://Assets/Floorgrid/floor texture1.png" id="1_v3b4g"]
 [ext_resource type="Texture2D" uid="uid://cs0dad6i0mlie" path="res://Assets/Boxes/stone.jpg" id="2_53ca0"]
 [ext_resource type="PackedScene" uid="uid://diitc58ex03re" path="res://Scenes/Player.tscn" id="3_3x2av"]
@@ -38,7 +37,6 @@ albedo_texture = ExtResource("2_53ca0")
 albedo_texture = ExtResource("2_53ca0")
 
 [node name="world" type="Node3D"]
-script = ExtResource("1_36kmi")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.938911, -0.23653, 0.250001, -0.326081, -0.379037, 0.866027, -0.110082, -0.894642, -0.43301, 600.654, -124.656, -133.11)

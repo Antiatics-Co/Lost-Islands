@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://blfxw3ko8y6qp"]
+[gd_scene load_steps=8 format=3 uid="uid://blfxw3ko8y6qp"]
 
 [ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="1_0ao0f"]
 [ext_resource type="PackedScene" uid="uid://ch0pbhc1ey7nb" path="res://Scenes/MainMenu.tscn" id="2_qiit2"]
+[ext_resource type="PackedScene" uid="uid://dmagv6xu8eha5" path="res://Scenes/world.tscn" id="3_2gp2p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5855"]
 bg_color = Color(0.286275, 0.6, 0.6, 1)
@@ -26,6 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ao0f")
 MainMenu = ExtResource("2_qiit2")
+mainGameScene = ExtResource("3_2gp2p")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1

@@ -7,7 +7,6 @@ var CurrentScene = get_tree().get_current_scene()
 
 @export var MainMenu : PackedScene
 @export var mainGameScene : PackedScene
-@export var PauseMenu : PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
